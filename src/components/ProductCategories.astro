@@ -1,10 +1,12 @@
 ---
+import { Image } from 'astro:assets';
+import homemadeSausagesPhoto from '../assets/product-homemade-sausages.jpg';
 import { productCategories } from '../data/products';
 import { site } from '../data/site';
 ---
 <section class="section products" id="products">
   <div class="container"><div class="section-heading row-heading"><div><h2>Что готовит «Зимовенька»</h2></div><p>Актуальный ассортимент, состав и стоимость уточняйте в Telegram или во ВКонтакте.</p></div>
-    <div class="product-grid">{productCategories.map((product) => <article class="product-card"><div class="product-icon" aria-hidden="true">{product.icon}</div><p class="kicker">Возможная категория</p><h3>{product.title}</h3><p>{product.description}</p><div class="card-footer"><span>Наличие уточняйте</span><a href={site.telegram} target="_blank" rel="noopener" aria-label={`Узнать наличие: ${product.title}`} data-event="click_product_availability">Узнать наличие →</a></div></article>)}</div>
+    <div class="product-grid">{productCategories.map((product, index) => <article class:list={['product-card', { 'has-photo': index === 0 }]}>{index === 0 ? <Image class="product-photo" src={homemadeSausagesPhoto} alt="Домашние колбасы «Зимовеньки»" widths={[420, 720]} sizes="(max-width: 820px) 92vw, 33vw" loading="lazy" /> : <div class="product-icon" aria-hidden="true">{product.icon}</div>}<h3>{product.title}</h3><p>{product.description}</p><div class="card-footer"><a href={site.telegram} target="_blank" rel="noopener" aria-label={`Узнать наличие: ${product.title}`} data-event="click_product_availability">Узнать наличие →</a></div></article>)}</div>
     <div class="button-row centered"><a class="button" href={site.telegram} target="_blank" rel="noopener" data-event="click_telegram_products">Ассортимент в Telegram</a><a class="button button-ghost" href={site.vk} target="_blank" rel="noopener" data-event="click_vk_products">Ассортимент во ВКонтакте</a></div>
   </div>
 </section>
