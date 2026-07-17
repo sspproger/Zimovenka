@@ -25,3 +25,15 @@ import { navigation, site } from '../data/site';
     </div>
   </div>
 </header>
+
+<script>
+  const mobileMenu = document.querySelector('.mobile-menu');
+
+  if (mobileMenu instanceof HTMLDetailsElement) {
+    mobileMenu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileMenu.open = false;
+      });
+    });
+  }
+</script>
