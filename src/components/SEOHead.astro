@@ -1,0 +1,30 @@
+---
+import { site } from '../data/site';
+interface Props { title?: string; description?: string; canonical?: string; image?: string; imageAlt?: string; noindex?: boolean; nofollow?: boolean; article?: boolean; publishDate?: string; updateDate?: string; author?: string; keywords?: string[]; }
+const { title = site.title, description = site.description, canonical = Astro.url.href, image = new URL('/og-image.png', Astro.site).href, imageAlt = site.name, noindex = false, nofollow = false, article = false, publishDate, updateDate, author = site.name, keywords = [] } = Astro.props;
+const robots = `${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'},max-image-preview:large`;
+---
+<title>{title}</title>
+<meta name="description" content={description} />
+{keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
+<link rel="canonical" href={canonical} />
+<meta name="robots" content={robots} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:type" content={article ? 'article' : 'website'} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={image} />
+<meta property="og:image:alt" content={imageAlt} />
+<meta property="og:locale" content={site.locale} />
+<meta property="og:site_name" content={site.name} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={image} />
+<meta name="theme-color" content={site.themeColor} />
+{article && publishDate && <meta property="article:published_time" content={publishDate} />}
+{article && updateDate && <meta property="article:modified_time" content={updateDate} />}
+{article && <meta property="article:author" content={author} />}
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/manifest.webmanifest" />

@@ -1,0 +1,6 @@
+---
+import { Image } from 'astro:assets';
+import goatsPhoto from '../assets/goats-estate.jpg';
+import { site } from '../data/site';
+---
+<section class="final-cta"><div class="container final-inner"><Image class="final-photo" src={goatsPhoto} alt="Козы в усадьбе на фоне зелёных холмов" widths={[320, 520]} sizes="(max-width: 820px) 78vw, 230px" loading="lazy" /><div><p class="eyebrow">К семейному столу</p><h2>Выберите деликатесы для семейного стола</h2><p>Перейдите в удобную социальную сеть, чтобы посмотреть актуальный ассортимент, уточнить наличие и оформить заказ.</p></div><div class="button-row"><a class="button button-outline-light" href={site.vk} target="_blank" rel="noopener">Написать во ВКонтакте</a><a class="button button-light" href={site.telegram} target="_blank" rel="noopener">Написать в Telegram</a></div></div></section>

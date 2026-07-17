@@ -1,0 +1,9 @@
+{
+  "name": "Зимовенька — Усадьба Лыковых",
+  "short_name": "Зимовенька",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff9ef",
+  "theme_color": "#720812",
+  "icons": [{ "src": "/apple-touch-icon.png", "sizes": "1920x1920", "type": "image/png" }]
+}

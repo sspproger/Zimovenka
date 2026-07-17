@@ -1,0 +1,20 @@
+---
+import SEOHead from '../components/SEOHead.astro';
+import '../styles/global.css';
+interface Props { title?: string; description?: string; noindex?: boolean; }
+const { title, description, noindex } = Astro.props;
+---
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <SEOHead {title} {description} {noindex} />
+    <slot name="head" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержанию</a>
+    <slot />
+  </body>
+</html>

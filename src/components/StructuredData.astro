@@ -1,0 +1,15 @@
+---
+import { site } from '../data/site';
+import { faq } from '../data/faq';
+const url = Astro.site?.href ?? Astro.url.origin;
+const graph = [
+  { '@type': 'Organization', '@id': `${url}#organization`, name: site.name, url, sameAs: [site.telegram, site.vk] },
+  { '@type': 'LocalBusiness', '@id': `${url}#business`, name: site.name, url, sameAs: [site.telegram, site.vk] },
+  { '@type': 'WebSite', '@id': `${url}#website`, url, name: site.name, inLanguage: 'ru-RU', publisher: { '@id': `${url}#organization` } },
+  { '@type': 'WebPage', '@id': `${url}#webpage`, url, name: site.title, description: site.description, inLanguage: 'ru-RU', isPartOf: { '@id': `${url}#website` } },
+  { '@type': 'FAQPage', '@id': `${url}#faq`, mainEntity: faq.map(({ question, answer }) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })) },
+  { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Главная', item: url }] },
+];
+const json = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph });
+---
+<script type="application/ld+json" set:html={json} />

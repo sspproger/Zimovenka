@@ -1,0 +1,20 @@
+---
+import { Image } from 'astro:assets';
+import banner from '../assets/banner-light.png';
+import logo from '../assets/logo-main.png';
+import { site } from '../data/site';
+---
+<section class="hero" id="top">
+  <Image class="hero-background" src={banner} alt="" widths={[960, 1440, 1920]} sizes="100vw" format="avif" loading="eager" fetchpriority="high" />
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="container hero-inner">
+    <Image class="hero-logo" src={logo} alt="Зимовенька — Усадьба Лыковых" width={190} height={190} densities={[1, 2, 3, 4]} format="png" quality="max" loading="eager" />
+    <div class="hero-location"><span></span><p>Усадьба Лыковых · семейное дело</p><span></span></div>
+    <h1><span>Мясные деликатесы</span><span>с душой</span></h1>
+    <p class="hero-lead">Домашние колбасы и мясные деликатесы для Вашего стола.</p>
+    <div class="button-row hero-actions">
+      <a class="button" href={site.telegram} target="_blank" rel="noopener" data-event="click_telegram_hero">Наши продукты</a>
+      <a class="button button-outline-light" href="#about">О нас</a>
+    </div>
+  </div>
+</section>
