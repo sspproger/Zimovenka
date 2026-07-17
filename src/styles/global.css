@@ -173,7 +173,10 @@ p { margin-bottom: 1.15rem; }
 .product-card > p:not(.kicker) { color: var(--muted); }
 .card-footer { display: flex; margin-top: auto; padding-top: 1.2rem; border-top: 1px solid var(--line); align-items: center; justify-content: space-between; gap: 1rem; font-size: .76rem; }
 .card-footer span { color: #826858; }
-.card-footer a { color: var(--red); font-weight: 700; }
+.card-footer a { display: inline-flex; min-height: 44px; padding: .7rem 1rem; border: 1px solid rgba(158,23,23,.55); border-radius: 10px; background: transparent; align-items: center; justify-content: center; color: var(--red); font-weight: 700; letter-spacing: .02em; transition: background-color .2s ease, border-color .2s ease, color .2s ease, transform .2s ease; }
+.card-footer a:hover { border-color: var(--red); background: var(--red); color: #fff8e8; transform: translateY(-1px); }
+.card-footer a:focus-visible { outline: 3px solid rgba(158,23,23,.25); outline-offset: 3px; }
+.card-footer a:active { transform: translateY(0); }
 
 /* Dark production section */
 .advantages { position: relative; background: var(--brown-dark); color: #ddc5a4; }
