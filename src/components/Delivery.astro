@@ -1,4 +1,27 @@
 ---
+import { Image } from 'astro:assets';
 import { site } from '../data/site';
+import fridgesPhoto from '../assets/self-service-fridges.jpg';
 ---
-<section class="section delivery" id="delivery"><div class="container delivery-grid"><div><p class="eyebrow">Доставка и получение</p><h2>Как получить заказ</h2><p class="lead">Актуальные условия, направления и сроки доставки необходимо уточнять при оформлении заказа.</p><div class="location-note"><span aria-hidden="true">⌖</span><div><strong>География доставки уточняется</strong><p>Возможные направления — Белгород и пригород, Старый Оскол, Губкин и Курск — будут опубликованы только после подтверждения.</p></div></div></div><aside><p class="eyebrow">Самостоятельно и удобно</p><h3>Холодильники самообслуживания</h3><p>Возможность покупки в фирменных холодильниках, актуальные адреса, график работы и наличие продукции уточняйте в Telegram и во ВКонтакте.</p><a class="button button-light" href={site.telegram} target="_blank" rel="noopener" data-event="click_telegram_delivery">Посмотреть актуальные адреса</a></aside></div></section>
+<section class="section delivery" id="delivery">
+  <div class="container delivery-grid">
+    <div>
+      <p class="eyebrow">Точки продаж</p>
+      <h2>Где купить продукцию</h2>
+      <h3 class="locations-title">Адреса и режим работы</h3>
+      <ul class="sales-locations">
+        <li><address><strong>ТЦ «Атлас», Водстрой</strong><span>ул. Щорса, 8Д, 1 этаж</span><time>8:00–22:00</time></address></li>
+        <li><address><strong>ТРЦ «Сити Молл»</strong><span>Белгород, напротив Kari, 1 этаж</span><time>10:00–22:00</time></address></li>
+        <li><address><strong>ТЦ «Меркурий»</strong><span>Белгород, ул. Победы, 147, на входе справа</span><time>8:00–22:00</time></address></li>
+        <li><address><strong>ТЦ «Маяк»</strong><span>Белгород, ул. 50-летия Белгородской области, 11, возле «Магнита»</span><time>9:00–21:00</time></address></li>
+      </ul>
+    </div>
+    <aside>
+      <Image class="delivery-photo" src={fridgesPhoto} alt="Фирменные холодильники самообслуживания «Зимовенька»" widths={[360, 560, 760]} sizes="(max-width: 760px) 84vw, 38vw" loading="lazy" />
+      <p class="eyebrow">Самостоятельно и удобно</p>
+      <h3>Холодильники самообслуживания</h3>
+      <p>Продукцию можно купить в фирменных холодильниках самообслуживания. Актуальное наличие уточняйте в Telegram.</p>
+      <a class="button button-light" href={site.telegram} target="_blank" rel="noopener" data-event="click_telegram_delivery">Уточнить наличие</a>
+    </aside>
+  </div>
+</section>

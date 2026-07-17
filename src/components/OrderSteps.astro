@@ -1,5 +1,0 @@
----
-import { site } from '../data/site';
-const steps = [['Выберите удобную социальную сеть', 'Перейдите в Telegram или во ВКонтакте.'], ['Посмотрите актуальный ассортимент', 'Уточните наличие, состав, стоимость и доступные способы получения.'], ['Напишите сообщение', 'Сообщите, какую продукцию хотите заказать, и согласуйте получение.']];
----
-<section class="section order" id="order"><div class="container"><div class="section-heading"><p class="eyebrow">Три простых шага</p><h2>Как заказать продукцию</h2></div><ol class="steps">{steps.map(([title, text], i) => <li><span>{i + 1}</span><div><h3>{title}</h3><p>{text}</p></div></li>)}</ol><div class="button-row centered"><a class="button" href={site.telegram} target="_blank" rel="noopener">Оформить заказ в Telegram</a><a class="button button-ghost" href={site.vk} target="_blank" rel="noopener">Оформить заказ во ВКонтакте</a></div></div></section>

@@ -36,7 +36,7 @@ const products = productCategories.map((product) => ({
 }));
 ---
 <section class="section products" id="products">
-  <div class="container"><div class="section-heading row-heading"><div><h2>Что готовит «Зимовенька»</h2></div><p>Актуальный ассортимент, состав и стоимость уточняйте в Telegram или во ВКонтакте.</p></div>
+  <div class="container"><div class="section-heading row-heading"><div><h2>Что готовит «Зимовенька»</h2></div><p>Актуальный ассортимент, состав и стоимость уточняйте в <a class="product-social-link" href={site.telegram} target="_blank" rel="noopener" data-event="click_telegram_products_intro">Telegram</a> или во <a class="product-social-link" href={site.vk} target="_blank" rel="noopener" data-event="click_vk_products_intro">ВКонтакте</a>.</p></div>
     <div class="product-grid">{products.map((product) => <article class:list={['product-card', { 'has-photo': product.photo }]}>{product.photo ? <Image class="product-photo" src={product.photo.src} alt={product.photo.alt} widths={[420, 720]} sizes="(max-width: 820px) 92vw, 33vw" loading="lazy" /> : <div class="product-icon" aria-hidden="true">{product.icon}</div>}<h3>{product.title}</h3><div class="card-footer"><a href={site.telegram} target="_blank" rel="noopener" aria-label={`Уточнить наличие: ${product.title}`} data-event="click_product_availability">Уточнить наличие →</a></div></article>)}</div>
     <div class="button-row centered"><a class="button" href={site.telegram} target="_blank" rel="noopener" data-event="click_telegram_products">Ассортимент в Telegram</a><a class="button button-ghost" href={site.vk} target="_blank" rel="noopener" data-event="click_vk_products">Ассортимент во ВКонтакте</a></div>
   </div>

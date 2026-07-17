@@ -12,5 +12,5 @@ export const site = {
 export const navigation = [
   { href: '#about', label: 'О семье' }, { href: '#products', label: 'Продукция' },
   { href: '#values', label: 'Наши ценности' }, { href: '#delivery', label: 'Доставка' },
-  { href: '#order', label: 'Как заказать' }, { href: '#faq', label: 'Вопросы' },
+  { href: '#faq', label: 'Вопросы' },
 ] as const;
