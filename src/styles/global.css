@@ -75,6 +75,7 @@ p { margin-bottom: 1.15rem; }
 .button-ghost { border-color: var(--red); background: transparent; color: var(--red); }
 .button-ghost:hover { color: #fff; }
 .button-light { border-color: var(--cream); background: var(--cream); color: var(--wine); }
+.button-light:hover { border-color: #fff8e7; background: #fff8e7; color: var(--brown); }
 .button-outline-light { border-color: rgba(255, 244, 221, .68); background: transparent; color: #fff8e7; }
 .button-outline-light:hover { background: var(--cream); color: var(--brown); }
 .button-row { display: flex; flex-wrap: wrap; gap: .9rem; }
@@ -147,6 +148,7 @@ p { margin-bottom: 1.15rem; }
 
 /* Values */
 .values { background: var(--cream-deep); }
+.values .section-heading::after { display: none; }
 .value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--line); }
 .value-visual { position: relative; min-height: 100%; margin: 0; overflow: hidden; background: rgba(249,241,223,.46); }
 .value-visual:first-child { border-right: 1px solid var(--line); }
@@ -192,7 +194,7 @@ p { margin-bottom: 1.15rem; }
 .sales-locations strong { color: var(--wine); }
 .sales-locations time { margin-top: .2rem; color: var(--red); font-weight: 700; }
 .delivery aside { padding: clamp(2rem, 5vw, 4rem); border: 1px solid var(--line); background: var(--cream-deep); }
-.delivery-photo { width: min(100%, 390px); aspect-ratio: 3 / 4; margin: 0 auto 2rem; object-fit: cover; }
+.delivery-photo { width: min(100%, 520px); height: auto; margin: 0 auto 2rem; }
 .delivery aside h3 { font-size: 2.15rem; }
 .delivery aside p { color: var(--muted); }
 .delivery aside .button { margin-top: 1rem; border-color: var(--red); background: var(--red); color: #fff; }
@@ -211,10 +213,10 @@ p { margin-bottom: 1.15rem; }
 
 /* CTA and footer */
 .final-cta { padding: 5.5rem 0; background: var(--brown); color: #ddc8aa; }
-.final-inner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(440px, 500px); grid-template-areas: 'copy photo' 'copy actions'; align-items: end; gap: 1.5rem 3rem; }
+.final-inner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(440px, 500px); grid-template-areas: 'copy photo'; align-items: center; gap: 1.5rem 3rem; }
 .final-inner > .final-photo { grid-area: photo; width: 230px; height: 290px; align-self: end; justify-self: end; border: 6px solid #fff1d8; border-radius: 14px; object-fit: cover; object-position: center; }
 .final-inner > div:first-of-type { grid-area: copy; align-self: center; }
-.final-inner > .button-row { grid-area: actions; justify-content: end; }
+.final-inner > div:first-of-type .button-row { justify-content: flex-start; margin-top: 1.5rem; }
 .final-inner h2 { margin-bottom: .8rem; color: #fff0d2; }
 .final-inner .eyebrow { color: #ce8068; }
 .footer { padding: 5rem 0 2rem; border-top: 1px solid rgba(255,255,255,.08); background: #160603; color: #c7aa88; }
@@ -236,7 +238,7 @@ p { margin-bottom: 1.15rem; }
   .desktop-nav { gap: 1rem; }
   .desktop-nav a { font-size: .78rem; }
   .product-grid { grid-template-columns: repeat(2, 1fr); }
-  .final-inner { grid-template-columns: minmax(0, 1fr) 410px; grid-template-areas: 'copy photo' 'copy actions'; column-gap: 1.5rem; }
+  .final-inner { grid-template-columns: minmax(0, 1fr) 410px; grid-template-areas: 'copy photo'; column-gap: 1.5rem; }
   .final-inner > .final-photo { width: 180px; height: 230px; }
   .final-inner .button-row { grid-column: auto; }
   .final-inner .button { padding-inline: .9rem; }
@@ -273,7 +275,7 @@ p { margin-bottom: 1.15rem; }
   .value-visual:first-child, .value-copy { border-right: 0; border-bottom: 1px solid var(--line); }
   .product-card { min-height: 300px; }
   .faq-intro { position: static; }
-  .final-inner { grid-template-columns: 1fr; grid-template-areas: 'copy' 'photo' 'actions'; text-align: center; }
+  .final-inner { grid-template-columns: 1fr; grid-template-areas: 'copy' 'photo'; text-align: center; }
   .final-inner > .final-photo { width: min(72vw, 280px); height: auto; aspect-ratio: 4 / 5; margin-inline: 0; justify-self: end; }
   .final-inner .button-row { grid-column: auto; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .footer-main { grid-template-columns: 1fr; }

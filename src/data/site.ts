@@ -10,7 +10,7 @@ export const site = {
 } as const;
 
 export const navigation = [
-  { href: '#about', label: 'О семье' }, { href: '#products', label: 'Продукция' },
-  { href: '#values', label: 'Наши ценности' }, { href: '#delivery', label: 'Доставка' },
+  { href: '#about', label: 'О семье' }, { href: '#values', label: 'Наши ценности' },
+  { href: '#products', label: 'Продукция' }, { href: '#delivery', label: 'Где купить' },
   { href: '#faq', label: 'Вопросы' },
 ] as const;
