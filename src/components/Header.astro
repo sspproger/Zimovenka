@@ -13,12 +13,12 @@ import { navigation, site } from '../data/site';
       {navigation.map((item) => <a href={item.href}>{item.label}</a>)}
     </nav>
     <div class="header-actions">
-      <a class="button button-small desktop-only" href={site.telegram} target="_blank" rel="noopener" data-event="click_telegram_header">Заказать</a>
+      <a class="button button-small desktop-only" href={site.telegram} target="_blank" rel="noopener" data-event="click_telegram_header">Хочу попробовать</a>
       <details class="mobile-menu">
         <summary aria-label="Открыть меню"><span></span><span></span><span></span></summary>
         <div class="mobile-panel">
           <nav aria-label="Мобильная навигация">{navigation.map((item) => <a href={item.href}>{item.label}</a>)}</nav>
-          <a class="button" href={site.telegram} target="_blank" rel="noopener">Заказать в Telegram</a>
+          <a class="button" href={site.telegram} target="_blank" rel="noopener">Хочу попробовать</a>
           <a class="button button-ghost" href={site.vk} target="_blank" rel="noopener">Открыть ВКонтакте</a>
         </div>
       </details>
