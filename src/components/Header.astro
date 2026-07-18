@@ -2,22 +2,24 @@
 import { Image } from 'astro:assets';
 import logo from '../assets/logo-main.png';
 import { navigation, site } from '../data/site';
+const isHomePage = Astro.url.pathname === '/';
+const homeHref = (hash: string) => isHomePage ? hash : `/${hash}`;
 ---
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="#top" aria-label="Зимовенька — на главную">
+    <a class="brand" href={homeHref('#top')} aria-label="Зимовенька — на главную">
       <Image src={logo} alt="" width={56} height={56} densities={[1, 2, 3, 4]} format="png" quality="max" loading="eager" />
       <span><strong>Зимовенька</strong><small>Усадьба Лыковых</small></span>
     </a>
     <nav class="desktop-nav" aria-label="Основная навигация">
-      {navigation.map((item) => <a href={item.href}>{item.label}</a>)}
+      {navigation.map((item) => <a href={homeHref(item.href)}>{item.label}</a>)}
     </nav>
     <div class="header-actions">
       <a class="button button-small desktop-only" href={site.telegram} target="_blank" rel="noopener" data-event="click_telegram_header">Хочу попробовать</a>
       <details class="mobile-menu">
         <summary aria-label="Открыть меню"><span></span><span></span><span></span></summary>
         <div class="mobile-panel">
-          <nav aria-label="Мобильная навигация">{navigation.map((item) => <a href={item.href}>{item.label}</a>)}</nav>
+          <nav aria-label="Мобильная навигация">{navigation.map((item) => <a href={homeHref(item.href)}>{item.label}</a>)}</nav>
           <a class="button" href={site.telegram} target="_blank" rel="noopener">Хочу попробовать</a>
           <a class="button button-ghost" href={site.vk} target="_blank" rel="noopener">Открыть ВКонтакте</a>
         </div>

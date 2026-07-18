@@ -1,6 +1,6 @@
 export const site = {
   name: 'Зимовенька — Усадьба Лыковых', shortName: 'Зимовенька',
-  title: 'Домашние мясные деликатесы | Зимовенька — семья Лыковых',
+  title: 'Зимовенька',
   description: 'Семейное производство домашних колбас и мясных деликатесов. История семьи Лыковых, актуальный ассортимент, доставка и заказ в Telegram или во ВКонтакте.',
   telegram: 'https://t.me/zimovenka', vk: 'https://vk.com/zimovenka31', locale: 'ru_RU', themeColor: '#720812',
   lastUpdated: '16 июля 2026',
