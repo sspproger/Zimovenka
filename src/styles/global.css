@@ -209,7 +209,7 @@ p { margin-bottom: 1.15rem; }
 .accordion summary::-webkit-details-marker { display: none; }
 .accordion summary span { color: var(--red); font-size: 1.5rem; transition: transform .2s; }
 .accordion details[open] summary span { transform: rotate(45deg); }
-.accordion details p { padding: 0 2rem 1.5rem 0; color: var(--muted); }
+.accordion details p { padding: 0 2rem 1.5rem 0; color: var(--muted); white-space: pre-line; }
 
 /* CTA and footer */
 .final-cta { padding: 5.5rem 0; background: var(--brown); color: #ddc8aa; }
