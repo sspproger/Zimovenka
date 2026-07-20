@@ -16,16 +16,28 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px;
+}
 body {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
   margin: 0;
   overflow-x: hidden;
+  overflow-x: clip;
   background: var(--cream);
   color: var(--ink);
   font-family: var(--serif);
   font-size: 17px;
   line-height: 1.65;
 }
+header, main, footer, section { max-width: 100%; }
 img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; }
 h1, h2, h3, p { margin-top: 0; }
@@ -35,6 +47,8 @@ h2 { font-size: clamp(2.25rem, 4.1vw, 3.8rem); }
 h3 { font-size: 1.3rem; }
 p { margin-bottom: 1.15rem; }
 .container { width: min(1240px, calc(100% - 48px)); margin-inline: auto; }
+.header-inner > *, .story-grid > *, .value-grid > *, .product-grid > *, .delivery-grid > *, .faq-grid > *, .final-inner > *, .footer-main > * { min-width: 0; }
+.contacts, .footer-legal, .accordion { overflow-wrap: anywhere; }
 .narrow { max-width: 780px; }
 .section { padding: clamp(5.5rem, 9vw, 8.5rem) 0; }
 .eyebrow {
