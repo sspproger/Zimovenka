@@ -6,7 +6,7 @@ export const site = {
   lastUpdated: '16 июля 2026',
   // TODO: заменить на достоверные данные, предоставленные семьёй Лыковых.
   founded: '[год основания семейного дела]', location: '[где находится производство]', phone: '+79087846795',
-  email: '89192273745@mail.ru', address: '[адрес]', hours: '[режим работы]', legal: '[реквизиты бизнеса]',
+  email: 'zimovenka31@mail.ru', address: '[адрес]', hours: '[режим работы]', legal: '[реквизиты бизнеса]',
 } as const;
 
 export const navigation = [
