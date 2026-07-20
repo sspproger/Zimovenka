@@ -11,6 +11,6 @@ export const site = {
 
 export const navigation = [
   { href: '#about', label: 'О семье' }, { href: '#values', label: 'Наши ценности' },
-  { href: '#products', label: 'Продукция' }, { href: '#delivery', label: 'Где купить' },
+  { href: '#products', label: 'Продукция' }, { href: '#make-sausage', label: 'Из вашего мяса' }, { href: '#delivery', label: 'Где купить' },
   { href: '#faq', label: 'Вопросы' },
 ] as const;
