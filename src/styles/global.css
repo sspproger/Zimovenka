@@ -163,6 +163,7 @@ p { margin-bottom: 1.15rem; }
 /* Values */
 .values { background: var(--cream-deep); }
 .values .section-heading::after { display: none; }
+.values-title-nowrap { white-space: nowrap; }
 .value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--line); }
 .value-visual { position: relative; min-height: 100%; margin: 0; overflow: hidden; background: rgba(249,241,223,.46); }
 .value-visual:first-child { border-right: 1px solid var(--line); }
@@ -317,6 +318,7 @@ p { margin-bottom: 1.15rem; }
   .header-inner { min-height: 72px; }
   .mobile-panel { top: 72px; max-height: calc(100dvh - 72px); }
   .section { padding: 4.5rem 0; }
+  .values .section-heading h2 { font-size: clamp(1.45rem, 6.7vw, 1.8rem); }
   .hero { min-height: calc(100svh - 72px); }
   .hero-inner { min-height: calc(100svh - 72px); padding-block: 2rem 3.5rem; }
   .hero-logo { width: 165px; height: 165px; margin-bottom: 4rem; border-width: 10px; }
