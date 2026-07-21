@@ -280,7 +280,7 @@ p { margin-bottom: 1.15rem; }
   .mobile-panel nav a { min-height: 46px; padding: .7rem .3rem; border-bottom: 1px solid var(--line); font-weight: 700; text-decoration: none; }
   .mobile-panel > .button { width: 100%; margin-top: .7rem; }
   .hero { min-height: calc(100svh - 82px); }
-  .hero-inner { min-height: calc(100svh - 82px); justify-content: flex-start; padding-block: 2rem 5rem; }
+  .hero-inner { min-height: calc(100svh - 82px); justify-content: flex-start; padding-block: 3rem 4rem; }
   .hero-logo { width: 145px; height: 145px; margin-bottom: 1rem; border-width: 10px; }
   .hero-location { grid-template-columns: 35px auto 35px; justify-content: center; }
   .hero-location p { font-size: .58rem; letter-spacing: .24em; }
