@@ -287,6 +287,7 @@ p { margin-bottom: 1.15rem; }
   .hero h1 { max-width: 100%; margin: 1.15rem 0 .75rem; font-size: clamp(1.65rem, 7.8vw, 3.15rem); }
   .hero h1 span { display: block; }
   .hero-lead { margin-bottom: 3.25rem; font-size: 1.05rem; }
+  .hero-location, .hero h1, .hero-lead { transform: translateY(-1rem); }
   .hero-actions { display: grid; width: min(100%, 390px); }
   .story-grid, .delivery-grid, .faq-grid { grid-template-columns: 1fr; }
   .delivery aside h3 { max-width: 100%; font-size: clamp(1.5rem, 7vw, 1.9rem); hyphens: auto; overflow-wrap: anywhere; }
