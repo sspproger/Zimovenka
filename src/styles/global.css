@@ -281,7 +281,7 @@ p { margin-bottom: 1.15rem; }
   .mobile-panel > .button { width: 100%; margin-top: .7rem; }
   .hero { min-height: calc(100svh - 82px); }
   .hero-inner { min-height: calc(100svh - 82px); justify-content: flex-start; padding-block: 3rem 4rem; }
-  .hero-logo { width: 145px; height: 145px; margin-bottom: 2.25rem; border-width: 10px; }
+  .hero-logo { width: 145px; height: 145px; margin-bottom: 3.25rem; border-width: 10px; }
   .hero-location { grid-template-columns: 35px auto 35px; justify-content: center; }
   .hero-location p { font-size: .58rem; letter-spacing: .24em; }
   .hero h1 { max-width: 100%; margin: 1.15rem 0 .75rem; font-size: clamp(1.65rem, 7.8vw, 3.15rem); }
@@ -318,7 +318,7 @@ p { margin-bottom: 1.15rem; }
   .section { padding: 4.5rem 0; }
   .hero { min-height: calc(100svh - 72px); }
   .hero-inner { min-height: calc(100svh - 72px); padding-block: 2rem 3.5rem; }
-  .hero-logo { width: 125px; height: 125px; margin-bottom: 2.25rem; border-width: 10px; }
+  .hero-logo { width: 125px; height: 125px; margin-bottom: 3.25rem; border-width: 10px; }
   .hero-location { grid-template-columns: 18px auto 18px; gap: .7rem; }
   .hero h1 { margin: .85rem 0 .55rem; }
   .hero-lead { margin-bottom: .9rem; font-size: .95rem; }
