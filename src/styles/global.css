@@ -290,10 +290,8 @@ p { margin-bottom: 1.15rem; }
   .hero-location, .hero h1, .hero-lead, .hero-actions { transform: translateY(-2rem); }
   .hero-actions { display: grid; width: min(100%, 390px); }
   .story-grid, .delivery-grid, .faq-grid { grid-template-columns: 1fr; }
-  .story { padding-top: 1.5rem; }
-  .story-grid { row-gap: 1.25rem; }
   .delivery aside h3 { max-width: 100%; font-size: clamp(1.5rem, 7vw, 1.9rem); hyphens: auto; overflow-wrap: anywhere; }
-  .story-art { width: min(82vw, 300px); max-width: 100%; margin-inline: auto; }
+  .story-art { max-width: 600px; margin-inline: auto; }
   .story-copy { max-width: 680px; margin-inline: auto; }
   .value-grid, .product-grid { grid-template-columns: 1fr; }
   .value-visual { min-height: 0; aspect-ratio: 3 / 4; }
