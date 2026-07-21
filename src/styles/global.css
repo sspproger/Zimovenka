@@ -279,14 +279,14 @@ p { margin-bottom: 1.15rem; }
   .mobile-panel nav { display: flex; flex-direction: column; }
   .mobile-panel nav a { min-height: 46px; padding: .7rem .3rem; border-bottom: 1px solid var(--line); font-weight: 700; text-decoration: none; }
   .mobile-panel > .button { width: 100%; margin-top: .7rem; }
-  .hero { min-height: 760px; }
-  .hero-inner { min-height: 760px; padding-block: 3rem; }
-  .hero-logo { width: 145px; height: 145px; }
+  .hero { min-height: calc(100svh - 82px); }
+  .hero-inner { min-height: calc(100svh - 82px); justify-content: flex-start; padding-block: 2rem 5rem; }
+  .hero-logo { width: 145px; height: 145px; margin-bottom: 1rem; border-width: 10px; }
   .hero-location { grid-template-columns: 35px auto 35px; justify-content: center; }
   .hero-location p { font-size: .58rem; letter-spacing: .24em; }
-  .hero h1 { max-width: 100%; font-size: clamp(1.65rem, 7.8vw, 3.15rem); }
+  .hero h1 { max-width: 100%; margin: 1.15rem 0 .75rem; font-size: clamp(1.65rem, 7.8vw, 3.15rem); }
   .hero h1 span { display: block; }
-  .hero-lead { font-size: 1.05rem; }
+  .hero-lead { margin-bottom: 1.2rem; font-size: 1.05rem; }
   .hero-actions { display: grid; width: min(100%, 390px); }
   .story-grid, .delivery-grid, .faq-grid { grid-template-columns: 1fr; }
   .delivery aside h3 { max-width: 100%; font-size: clamp(1.5rem, 7vw, 1.9rem); hyphens: auto; overflow-wrap: anywhere; }
@@ -316,8 +316,12 @@ p { margin-bottom: 1.15rem; }
   .header-inner { min-height: 72px; }
   .mobile-panel { top: 72px; max-height: calc(100dvh - 72px); }
   .section { padding: 4.5rem 0; }
-  .hero-logo { width: 125px; height: 125px; }
+  .hero { min-height: calc(100svh - 72px); }
+  .hero-inner { min-height: calc(100svh - 72px); padding-block: 1rem 4.5rem; }
+  .hero-logo { width: 125px; height: 125px; margin-bottom: .65rem; border-width: 10px; }
   .hero-location { grid-template-columns: 18px auto 18px; gap: .7rem; }
+  .hero h1 { margin: .85rem 0 .55rem; }
+  .hero-lead { margin-bottom: .9rem; font-size: .95rem; }
   .button-row.centered { display: grid; }
   .final-inner .button-row { grid-template-columns: 1fr; }
   .button { width: 100%; padding-inline: 1rem; }
