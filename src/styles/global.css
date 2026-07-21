@@ -317,7 +317,7 @@ p { margin-bottom: 1.15rem; }
   .mobile-panel { top: 72px; max-height: calc(100dvh - 72px); }
   .section { padding: 4.5rem 0; }
   .hero { min-height: calc(100svh - 72px); }
-  .hero-inner { min-height: calc(100svh - 72px); padding-block: 1rem 4.5rem; }
+  .hero-inner { min-height: calc(100svh - 72px); padding-block: 2rem 3.5rem; }
   .hero-logo { width: 125px; height: 125px; margin-bottom: .65rem; border-width: 10px; }
   .hero-location { grid-template-columns: 18px auto 18px; gap: .7rem; }
   .hero h1 { margin: .85rem 0 .55rem; }
